@@ -1,0 +1,88 @@
+body{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    min-height:100vh;
+    background-color: aquamarine;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper{
+    width: 65vmin;
+    height:70vmin;
+    display: flex;
+    overflow:hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color:blueviolet
+}
+
+.game-details{
+    color:black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.play-board{
+    width: 100%;
+    height: 100%;
+    display:grid; 
+    grid-template:repeat(30, 1fr) / repeat(30, 1fr);
+    background-color:purple;
+}
+
+.play-board .food{
+    background-color: red;
+}
+
+.play-board .head{
+    background-color: green;
+}
+
+.game-over-overlay {
+    display: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.game-over-overlay.active {
+    display: flex;
+}
+
+.game-over-text {
+    margin-bottom: 20px;
+}
+
+.restart-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+}
+.restart-btn:hover {
+    background: #e60000;
+}
+
